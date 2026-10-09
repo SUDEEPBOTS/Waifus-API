@@ -1,0 +1,10 @@
+{
+  "name": "waifus-api-client",
+  "version": "1.0.0",
+  "description": "Official JavaScript client for the Waifu Database API",
+  "main": "waifus.js",
+  "type": "commonjs",
+  "keywords": ["waifu", "anime", "api", "gacha"],
+  "author": "SUDEEPBOTS",
+  "license": "MIT"
+}

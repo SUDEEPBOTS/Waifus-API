@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a14" />
+      <stop offset="50%" stop-color="#120e24" />
+      <stop offset="100%" stop-color="#180c1e" />
+    </linearGradient>
+
+    <!-- Glowing Accent Gradients -->
+    <linearGradient id="neonPink" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff2a85" />
+      <stop offset="50%" stop-color="#ff73b3" />
+      <stop offset="100%" stop-color="#9d4edd" />
+    </linearGradient>
+
+    <linearGradient id="cyanPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f5d4" />
+      <stop offset="100%" stop-color="#7b2cbf" />
+    </linearGradient>
+
+    <linearGradient id="goldGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffb703" />
+      <stop offset="100%" stop-color="#fb8500" />
+    </linearGradient>
+
+    <!-- Filters for Glow -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <style>
+      .title-text {
+        font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+        font-weight: 900;
+        letter-spacing: 4px;
+        fill: url(#neonPink);
+      }
+      .sub-text {
+        font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+        font-weight: 500;
+        fill: #e2e8f0;
+        letter-spacing: 1.5px;
+      }
+      .badge-text {
+        font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+        font-weight: 700;
+        font-size: 13px;
+        fill: #ffffff;
+      }
+      .kanji {
+        font-family: sans-serif;
+        font-weight: bold;
+        fill: rgba(255, 42, 133, 0.08);
+      }
+    </style>
+  </defs>
+
+  <!-- Deep Matte Dark Background -->
+  <rect width="1200" height="420" rx="16" fill="url(#bgGrad)" />
+
+  <!-- Background Japanese Kanji Watermark -->
+  <text x="780" y="290" font-size="280" class="kanji">嫁</text>
+  <text x="960" y="380" font-size="160" class="kanji">愛</text>
+
+  <!-- Cyber Grid Lines -->
+  <g stroke="rgba(255, 255, 255, 0.04)" stroke-width="1">
+    <line x1="0" y1="70" x2="1200" y2="70" />
+    <line x1="0" y1="140" x2="1200" y2="140" />
+    <line x1="0" y1="210" x2="1200" y2="210" />
+    <line x1="0" y1="280" x2="1200" y2="280" />
+    <line x1="0" y1="350" x2="1200" y2="350" />
+    <line x1="150" y1="0" x2="150" y2="420" />
+    <line x1="300" y1="0" x2="300" y2="420" />
+    <line x1="450" y1="0" x2="450" y2="420" />
+    <line x1="600" y1="0" x2="600" y2="420" />
+    <line x1="750" y1="0" x2="750" y2="420" />
+    <line x1="900" y1="0" x2="900" y2="420" />
+    <line x1="1050" y1="0" x2="1050" y2="420" />
+  </g>
+
+  <!-- Glowing Corner Accents -->
+  <path d="M 30,60 L 30,30 L 60,30" stroke="#ff2a85" stroke-width="3" fill="none" filter="url(#softGlow)" />
+  <path d="M 1170,60 L 1170,30 L 1140,30" stroke="#00f5d4" stroke-width="3" fill="none" filter="url(#softGlow)" />
+  <path d="M 30,360 L 30,390 L 60,390" stroke="#7b2cbf" stroke-width="3" fill="none" filter="url(#softGlow)" />
+  <path d="M 1170,360 L 1170,390 L 1140,390" stroke="#ffb703" stroke-width="3" fill="none" filter="url(#softGlow)" />
+
+  <!-- Animated Glowing Circles / Orbs -->
+  <circle cx="950" cy="180" r="140" fill="url(#cyanPurple)" opacity="0.15" filter="url(#glow)">
+    <animate attributeName="r" values="130;150;130" dur="4s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="200" cy="120" r="100" fill="url(#neonPink)" opacity="0.18" filter="url(#glow)">
+    <animate attributeName="r" values="90;110;90" dur="5s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Sakura Petals (Floating) -->
+  <g fill="#ff73b3" opacity="0.6">
+    <path d="M 180,260 C 185,250 195,255 190,265 C 185,275 175,270 180,260 Z">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 30,50; 60,100" dur="6s" repeatCount="indefinite" />
+    </path>
+    <path d="M 450,110 C 455,100 465,105 460,115 C 455,125 445,120 450,110 Z">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 40,60; 80,120" dur="7s" repeatCount="indefinite" />
+    </path>
+    <path d="M 720,280 C 725,270 735,275 730,285 C 725,295 715,290 720,280 Z">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 25,45; 50,90" dur="5s" repeatCount="indefinite" />
+    </path>
+    <path d="M 1020,90 C 1025,80 1035,85 1030,95 C 1025,105 1015,100 1020,90 Z">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 35,55; 70,110" dur="8s" repeatCount="indefinite" />
+    </path>
+  </g>
+
+  <!-- Top Pill Tag -->
+  <rect x="75" y="70" width="220" height="32" rx="16" fill="rgba(255, 42, 133, 0.15)" stroke="rgba(255, 42, 133, 0.5)" stroke-width="1.2" />
+  <circle cx="95" cy="86" r="5" fill="#ff2a85">
+    <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite" />
+  </circle>
+  <text x="110" y="91" class="badge-text" fill="#ff73b3" font-size="12" letter-spacing="1.5">⚡ VERCEL EDGE CLOUD</text>
+
+  <!-- Main Hero Title -->
+  <text x="75" y="160" font-size="52" class="title-text" filter="url(#softGlow)">WAIFU DATABASE API</text>
+  
+  <!-- Subtitle -->
+  <text x="75" y="202" font-size="19" class="sub-text">
+    High-Performance REST API for 5,000+ Anime Waifus • Rarity Tiers • Gacha System • Instant Search
+  </text>
+
+  <!-- Feature Badges -->
+  <g transform="translate(75, 235)">
+    <!-- Badge 1: Records -->
+    <rect x="0" y="0" width="160" height="38" rx="8" fill="rgba(15, 23, 42, 0.8)" stroke="#ff2a85" stroke-width="1.2" />
+    <text x="16" y="24" class="badge-text">🌸 5,000+ Waifus</text>
+
+    <!-- Badge 2: Gacha Engine -->
+    <rect x="175" y="0" width="165" height="38" rx="8" fill="rgba(15, 23, 42, 0.8)" stroke="#ffb703" stroke-width="1.2" />
+    <text x="191" y="24" class="badge-text">🎲 Gacha Summon</text>
+
+    <!-- Badge 3: Fast Response -->
+    <rect x="355" y="0" width="155" height="38" rx="8" fill="rgba(15, 23, 42, 0.8)" stroke="#00f5d4" stroke-width="1.2" />
+    <text x="371" y="24" class="badge-text">⚡ &lt;50ms Latency</text>
+
+    <!-- Badge 4: CRUD Ready -->
+    <rect x="525" y="0" width="150" height="38" rx="8" fill="rgba(15, 23, 42, 0.8)" stroke="#7b2cbf" stroke-width="1.2" />
+    <text x="541" y="24" class="badge-text">🔐 Full REST CRUD</text>
+  </g>
+
+  <!-- Bottom Terminal Snippet -->
+  <g transform="translate(75, 305)">
+    <rect x="0" y="0" width="600" height="48" rx="10" fill="rgba(10, 10, 20, 0.9)" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1" />
+    <circle cx="20" cy="24" r="5" fill="#ef4444" />
+    <circle cx="36" cy="24" r="5" fill="#f59e0b" />
+    <circle cx="52" cy="24" r="5" fill="#10b981" />
+    <text x="75" y="30" font-family="monospace" font-size="14" fill="#a5b4fc">
+      $ curl -sL <tspan fill="#38bdf8">https://wafus.vercel.app/Random</tspan> | jq
+    </text>
+  </g>
+
+  <!-- Glowing Right Side Anime Card Illustration Container -->
+  <g transform="translate(860, 50)">
+    <!-- Decorative card border glow -->
+    <rect x="0" y="0" width="240" height="320" rx="16" fill="rgba(255, 255, 255, 0.03)" stroke="url(#neonPink)" stroke-width="2" filter="url(#softGlow)" />
+    <!-- Inner Card Preview Mockup -->
+    <rect x="12" y="12" width="216" height="210" rx="12" fill="#18132b" />
+    
+    <!-- Stylized Anime Silhouette Lines -->
+    <circle cx="120" cy="95" r="45" fill="rgba(255, 115, 179, 0.25)" />
+    <path d="M 90,85 Q 120,50 150,85 Q 160,120 120,135 Q 80,120 90,85 Z" fill="rgba(255, 42, 133, 0.5)" />
+    <path d="M 85,150 Q 120,130 155,150 L 175,210 L 65,210 Z" fill="rgba(123, 44, 191, 0.6)" />
+
+    <!-- Card Rarity Badge -->
+    <rect x="20" y="235" width="105" height="24" rx="6" fill="rgba(251, 133, 0, 0.25)" stroke="#fb8500" stroke-width="1" />
+    <text x="28" y="252" font-family="'Segoe UI', sans-serif" font-weight="700" font-size="11" fill="#ffb703">🟡 LEGENDARY</text>
+
+    <!-- Card Character Name -->
+    <text x="20" y="280" font-family="'Segoe UI', sans-serif" font-weight="800" font-size="16" fill="#ffffff">Makima</text>
+    <text x="20" y="298" font-family="'Segoe UI', sans-serif" font-weight="500" font-size="12" fill="#94a3b8">Chainsaw Man • #01</text>
+  </g>
+</svg>
